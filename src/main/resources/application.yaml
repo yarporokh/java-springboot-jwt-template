@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: root
+    password: root
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+application:
+  security:
+    jwt:
+      secret-key: 3026773E3A665C582234797A4727386D554321695D52405A2942526758
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
